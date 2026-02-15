@@ -1,0 +1,94 @@
+Project Title
+SMS Spam Detection Using Natural Language Processing and Machine Learning
+
+1. Abstract
+Spam messages pose a serious challenge in digital communication systems. The objective of this project is to build a machine learning model capable of automatically classifying SMS messages as spam or legitimate (ham).
+Natural Language Processing (NLP) techniques such as TF-IDF vectorization were used to convert text into numerical features. Multiple classification algorithms including Naive Bayes, Logistic Regression, and Support Vector Machine (SVM) were implemented and evaluated.
+The best-performing model achieved approximately 98–99% accuracy, demonstrating strong predictive capability.
+
+2. Introduction
+With the increasing use of mobile communication, spam messages have become a common issue. These messages often contain:
+Fraudulent offers
+Phishing attempts
+Promotional content
+Malicious links
+Manual filtering is inefficient. Therefore, automated spam detection using machine learning is essential.
+
+3. Problem Statement
+To build a supervised machine learning model that classifies SMS messages into:
+0 → Ham (Legitimate message)
+1 → Spam (Unwanted message)
+The model should maximize spam detection while minimizing false alarms.
+
+4. Dataset Description
+Dataset Source: SMS Spam Collection Dataset
+Total Messages: ~5,500
+Columns:
+Column	Description
+label	ham or spam
+message	SMS text content
+
+Class distribution:
+~86% Ham
+~14% Spam
+The dataset is slightly imbalanced.
+
+5. Tools and Technologies Used
+Python
+Pandas
+NumPy
+Scikit-learn
+Matplotlib
+Seaborn
+WordCloud
+
+6. Methodology
+The project followed a structured machine learning workflow:
+
+6.1 Data Preprocessing
+Loaded dataset using Pandas
+Renamed columns
+Converted labels to numeric format (ham = 0, spam = 1)
+Created message length feature
+Removed stopwords during vectorization
+
+6.2 Exploratory Data Analysis (EDA)
+The following visualizations were created:
+Class distribution plot
+Message length distribution
+Spam word cloud
+Confusion matrix heatmap
+ROC curve
+
+
+7. Models Implemented
+7.1 Naive Bayes
+Multinomial Naive Bayes used
+Works very well for text classification
+Accuracy: ~96–98%
+
+7.2 Logistic Regression
+Linear classification model
+Good generalization ability
+Accuracy: ~97–98%
+
+7.3 Support Vector Machine (Best Model)
+Effective in high-dimensional spaces
+Performs well with text data
+Accuracy: ~98–99%
+ROC-AUC: > 0.98
+
+8. Model Evaluation Metrics
+The following metrics were used:
+Accuracy
+Precision
+Recall
+F1-score
+Confusion Matrix
+ROC-AUC Score
+
+9. Results
+Model	Accuracy
+Naive Bayes	96–98%
+Logistic Regression	97–98%
+SVM	98–99%
